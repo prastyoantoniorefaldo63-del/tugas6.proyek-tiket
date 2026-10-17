@@ -11,9 +11,9 @@ using namespace std;
 
     void jika(){     
             cout<<""<<endl;
-            cout<<"1. Tekan a jika ingin pergi ke Malang-Surabaya "<<endl;
-            cout<<"2. Tekan b jika ingin pergi ke Malang-Pasuruan "<<endl;
-            cout<<"3. Tekan c jika ingin pergi ke Malang-Jombang "<<endl;
+            cout<<"1. Tekan a jika ingin pergi ke Malang-Surabaya dengan harga 35000 "<<endl;
+            cout<<"2. Tekan b jika ingin pergi ke Malang-Pasuruan dengan harga 20000 "<<endl;
+            cout<<"3. Tekan c jika ingin pergi ke Malang-Jombang dengan harga 25000 "<<endl;
             cin>>tekan;
 
             if(tekan=="a"){
@@ -44,6 +44,8 @@ using namespace std;
             }
 
             if(tiket < 8){
+                    cout<<"=========================="<<endl;
+                    cout<<"STRUK TIKET BUS"<<endl;
             for(int i=0;i<tiket;i++){
                     if(tekan=="a"){
                     cout<<"=========================="<<endl;
@@ -73,8 +75,11 @@ using namespace std;
             }
 
         }
-int main() 
-{
+        
+int main() {
     pembukaan();
     jika();
+
+    system("pause");
+    return 0;
 }
