@@ -12,11 +12,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Ambil kode dari repository
+      - name: Ambil kode repository
         uses: actions/checkout@v4
 
       - name: Compile C++ menjadi EXE
-        run: g++ aldo.cpp -o JokoTiket.exe
+        shell: pwsh
+        run: |
+          g++ -static -static-libgcc -static-libstdc++ aldo.cpp -o JokoTiket.exe
 
       - name: Simpan file EXE
         uses: actions/upload-artifact@v4
