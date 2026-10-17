@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-    string teks, tekan, nama[7];
+    string teks, tekan, ulang, nama[7];
     int total, harga, tiket, umur[7];
     int i;
 
@@ -9,13 +9,15 @@ using namespace std;
         cout<<"Kami menyediakan tiket bus ke arah, Malang-Surabaya, Malang-Pasuruan, dan Malang-Jombang "<<endl;
     }
 
-    void jika(){     
+    void jika(){    
+            do{
             cout<<""<<endl;
             cout<<"1. Tekan a jika ingin pergi ke Malang-Surabaya dengan harga 35000 "<<endl;
             cout<<"2. Tekan b jika ingin pergi ke Malang-Pasuruan dengan harga 20000 "<<endl;
             cout<<"3. Tekan c jika ingin pergi ke Malang-Jombang dengan harga 25000 "<<endl;
             cin>>tekan;
-
+        
+            
             if(tekan=="a"){
                 cout<<"kamu memesan tiket Malang-Surabaya ";
             }else if(tekan=="b"){
@@ -72,8 +74,14 @@ using namespace std;
 
                 cout<<"Harga total tiket: ";
                 cout<<harga;
-            }
+                cout<<""<<endl;
+                cout<<""<<endl;
+                cout<<"Apkah ingin memesan tiket yang lain, tekan Y atau o ";
+                cin>>ulang;
 
+            }
+            }
+            while(ulang=="y"||ulang=="o");
         }
         
 int main() {
